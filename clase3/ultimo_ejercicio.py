@@ -1,0 +1,2 @@
+class Coche:
+    pass
