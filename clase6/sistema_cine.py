@@ -27,7 +27,7 @@ boletos = {
 # boletos['Avatar']
 # horario = peliculas["Avatar"]
 valor_boleto = 8000
-reservas = []
+reservas = []  #-> list()
 while True:
     pelicula = '' 
     horario = ''
@@ -66,12 +66,13 @@ while True:
     print("Horarios disponibles: ")
     print() #salto de linea
 
-    for index, horario in enumerate(peliculas[pelicula]):
+    for index, horario in enumerate(peliculas[pelicula]):  #peliculas[pelicula] -> accedo a los horarios disponibles
         print(f"{index+1} : {horario}")
 
     opcion_horario = int(input("Seleccione el horario: "))
     opcion_horario -= 1
-    horario = peliculas[pelicula][opcion_horario]
+    horario = peliculas[pelicula][opcion_horario] 
+            #peliculas['Avatar'][1] -> 16:00
 
     print(f"La cantidad de boletos para ese horario es {boletos[pelicula][opcion_horario]}")
 
@@ -84,6 +85,7 @@ while True:
     total_a_pagar = boletos_usuario * valor_boleto
 
     print(f"El total a pagar seran de {total_a_pagar} ")
+    boletos[pelicula][opcion_horario] = cantidad_boletos - boletos_usuario
 
     reservas.append({
         "pelicula" : pelicula,
