@@ -159,3 +159,9 @@ libros.pop("B003")
 
 for libro in libros.values():
     print(f"Titulo: {libro["titulo"]}| Autor: {libro["autor"][0]}| Genero: {libro["genero"]} | Stock: {libro["stock"]}")
+
+# ##ejemplo funcion
+
+# def mostrar_libros():
+#     for libro in libros.values():
+#         print(f"Titulo: {libro["titulo"]}| Autor: {libro["autor"][0]}| Genero: {libro["genero"]} | Stock: {libro["stock"]}")
